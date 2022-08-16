@@ -14,8 +14,7 @@ export const Tasks = () => {
     const nutShellUserObject = JSON.parse(localNutshellUser)
 
     //get all tasks by associated user
-    useEffect(
-        () => {
+    useEffect(() => {
         return fetch(`http://localhost:8088/tasks?_expand=user&userId=${nutShellUserObject.id}`)
             .then(res => res.json())
             .then((taskArray) => {
@@ -25,26 +24,5 @@ export const Tasks = () => {
         []
     )
 
-    useEffect(
-        () => {
-            
-
-        }
-
-    )
-
-
-
-
-    return (<>
-
-    </>)
-
+    return <></>
 }
-
-
-
-
-
-
-
