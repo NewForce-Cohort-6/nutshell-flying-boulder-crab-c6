@@ -7,9 +7,33 @@ import { Link, useNavigate } from "react-router-dom"
 
 export const Tasks = () => {
     const [tasks, setTasks] = useState([])
-    const [user, setUser] = useState([])
 
     const navigate = useNavigate()
+
+    const localNutshellUser = sessionStorage.getItem("activeUser")
+    const nutShellUserObject = JSON.parse(localNutshellUser)
+
+    //get all tasks by associated user
+    useEffect(
+        () => {
+        return fetch(`http://localhost:8088/tasks?_expand=user&userId=${nutShellUserObject.id}`)
+            .then(res => res.json())
+            .then((taskArray) => {
+                setTasks(taskArray)
+            })
+        },
+        []
+    )
+
+    useEffect(
+        () => {
+            
+
+        }
+
+    )
+
+
 
 
     return (<>
