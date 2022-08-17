@@ -87,31 +87,37 @@
       "id": 1,
       "userId": 1,
       "task": "Take out garbage",
-      "completed": "true"
+      "completed": "false",
+      "completedBy": "07/12/22"
     },
     {
       "id": 2,
       "userId": 2,
       "task": "File existing client folders",
-      "completed": "false"
+      "completed": "false",
+      "completedBy": "09/03/22"
     },
     {
       "id": 3,
       "userId": 3,
       "task": "Clean bathroom",
-      "completed": "false"
+      "completed": "false",
+      "completedBy": "10/01/22"
     },
     {
       "id": 4,
       "userId": 2,
       "task": "Reticulate splines",
-      "completed": "false"
+      "completed": "false",
+      "completedBy": "02/14/23"
     },
     {
       "id": 5,
       "userId": 1,
       "task": "Air out hard-drive cache",
-      "completed": "true"
+      "completed": "false"
+      ,
+      "completedBy": "02/22/23"
     }
   ],
   "events": [

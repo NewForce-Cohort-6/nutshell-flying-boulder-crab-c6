@@ -9,7 +9,7 @@ export const Nutshell = () => {
   return <Routes>
     <Route path="/" element={<Login />} />
     <Route path="/register" element={<Register />} />
-    <Route path="/home" element={
+    <Route path="/home/*" element={
       
         <ApplicationViews />
       
@@ -20,6 +20,12 @@ export const Nutshell = () => {
   </Routes>
 }
 
+/*
+
+router.ts:11 You rendered descendant <Routes> (or called `useRoutes()`) at "/home" (under <Route path="/home">) but the parent route path has no trailing "*". This means if you navigate deeper, the parent won't match anymore and therefore the child routes will never render.
+
+Please change the parent <Route path="/home"> to <Route path="/home/*">.
+*/
 // function App() {
 //   return (
 //     <div className="App">

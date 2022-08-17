@@ -24,5 +24,21 @@ export const Tasks = () => {
         []
     )
 
-    return <></>
+    return (
+    <>
+    <article className="tasks">
+        {
+            tasks.map(task => <div className="task" key={`task--${task.id}`}>
+                <section>{task.task}</section>
+                <section>To be completed by: {task.completedBy}</section>
+                <button onClick={() => navigate ("/editTask")}>Edit Task</button>
+            </div>
+
+            )
+        }
+    </article>
+    </>
+    )
 }
+
+//the button will navigate user to /editTask, but I'm not sure what to do with routes in UserViews. Might end up having similar problem that I'm having in TaskForm.js where we navigate there but see nothing.

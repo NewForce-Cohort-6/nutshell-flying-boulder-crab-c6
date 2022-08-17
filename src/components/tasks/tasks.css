@@ -1,2 +1,11 @@
 //Natalie Thiele
-//This module
+//This module maintains css styling for tasks.
+
+.task {
+    background-color: rgb(166, 220, 218);
+    border: 1px dotted rgb(61, 218, 61);
+    padding: 0.7rem;
+    margin: 0.5rem;
+}
+
+/* test css styling not working. */
