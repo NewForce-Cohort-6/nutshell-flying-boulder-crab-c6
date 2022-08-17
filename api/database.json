@@ -145,6 +145,13 @@
       "completed": true,
       "completedBy": "02/02/22",
       "id": 9
+    },
+    {
+      "userId": 3,
+      "task": "This is a big deal y'all don't forget. Get burritos.",
+      "completed": true,
+      "completedBy": "12/13/23",
+      "id": 10
     }
   ],
   "events": [
