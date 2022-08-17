@@ -1,5 +1,10 @@
-//Natalie Thiele
-//This module maintains css styling for tasks.
+/* Natalie Thiele
+This module maintains css styling for tasks. */
+
+.taskDisplay {
+    display: flex;
+    flex-direction: column;
+}
 
 .task {
     background-color: rgb(166, 220, 218);
@@ -7,5 +12,3 @@
     padding: 0.7rem;
     margin: 0.5rem;
 }
-
-/* test css styling not working. */
