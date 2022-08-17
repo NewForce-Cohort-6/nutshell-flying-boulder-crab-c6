@@ -9,7 +9,7 @@ export const Nutshell = () => {
   return <Routes>
     <Route path="/" element={<Login />} />
     <Route path="/register" element={<Register />} />
-    <Route path="/home/*" element={
+    <Route path="*" element={
       
         <ApplicationViews />
       

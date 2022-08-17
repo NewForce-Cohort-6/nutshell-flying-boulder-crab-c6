@@ -6,31 +6,38 @@ import { TaskForm } from "../tasks/TaskForm"
 export const UserViews = () => {
     return (
         <Routes>
-            <Route path="/" element={
-                <>
-                    <h1>Welcome to the Dashboard!</h1>
-
-                    <section>
-                        <TaskDisplay />
-                        {/* <Events /> */}
-                    </section>
-
-                    <Outlet />
-                </>
-            }>
-
-           
-
-            </Route>
-    </Routes>
+        <Route path="/home" element={<TaskDisplay />} />
+        <Route path="/home/create/task" element={<TaskForm />} />
 
 
+        </Routes>
     )
-}
 
+}
 
 //parking this for later:
 //     <Route path="createTask" element={ <TaskForm /> } />
+
+//<Routes>
+//<Route path="/" element={
+//    <>
+//        <h1>Welcome to the Dashboard!</h1>
+
+//        <section>
+//            <TaskDisplay />
+//            {/* <Events /> */}
+//        </section>
+
+//        <Outlet />
+//    </>
+//}>
+
+
+
+//</Route>
+//</Routes>
+
+
 // notes: I'm not sure I understand Routes and Route and how they're going to work.
 //If I do not include any other <Route> in this component, my button navigate-to pages work, but if I add a route they stop working. idk.
 //see notes in Tasks, TaskForm, TaskDisplay about buttons and navigate?
