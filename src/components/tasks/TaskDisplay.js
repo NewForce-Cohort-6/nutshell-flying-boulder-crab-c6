@@ -20,11 +20,9 @@ export const TaskDisplay = () => {
             <Tasks />
         </section>
         <section>
-            <button onClick={() => navigate ("/createTask")}>Create New Task</button>
+            <button onClick={() => navigate ("/home/create/task")}>Create New Task</button>
         </section>
         
         </article>
     </>)
 }
-
-//no idea why this button does navigate us to /createTask, see notes in UserViews.js and TaskForm.js

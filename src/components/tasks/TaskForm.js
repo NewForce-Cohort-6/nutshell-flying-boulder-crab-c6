@@ -1,5 +1,5 @@
 //Natalie Thiele
-//This module creates a form which posts new task to database
+//This module displays a form which posts a new task object to database
 
 import { useEffect, useState } from "react"
 import { Navigate, useNavigate } from "react-router-dom"
@@ -23,7 +23,7 @@ export const TaskForm = () => {
                 userId: nutShellUserObject.id,
                 task: task.task,
                 completed: task.completed,
-                completedBy: ""
+                completedBy: task.completedBy
             }
     
         
@@ -84,12 +84,9 @@ export const TaskForm = () => {
             <button 
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
                 className="btn btn-primary">
-                Submit Ticket
+                Submit Event
             </button>
         </form>
     </>
     )
 }
-
-//this does not appear when user navigates to /createTask
-//is it to do with route or is it the other errors I'm getting?
