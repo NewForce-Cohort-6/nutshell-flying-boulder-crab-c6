@@ -28,7 +28,7 @@ export const ChatEdit = () => {
 
 
     const handleSaveButtonClick = (event) => {
-        // event.preventDefault()
+        event.preventDefault()
 
         // The fetch for the PUT request to replace the object being edited
 
@@ -61,12 +61,12 @@ export const ChatEdit = () => {
                         height: "10rem"
                     }}
                     className="form-control"
-                    value={chat.description}
+                    value={chat.message}
                     onChange={
                         (evt) => {
                             // this updates state with a modified copy
                             const copy = { ...chat }
-                            copy.description = evt.target.value
+                            copy.message = evt.target.value
                             assignChat(copy)
                         }
                     }>{chat.message}</textarea>

@@ -6,10 +6,7 @@ import { useEffect, useState } from "react"
 import { Navigate, useNavigate } from "react-router-dom"
 
 export const ChatForm = () => {
-    /*
-        TODO: Add the correct default properties to the
-        initial state object
-    */
+    
     const [chat, update] = useState({
        message: "",
           })
