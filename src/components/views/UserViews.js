@@ -19,6 +19,7 @@ export const UserViews = () => {
         <Route path="/home/create/task" element={<TaskForm />} />
         <Route path="/home/:taskId/edit" element={<EditTask />} />
         <Route path="/home/news/:newsId/edit" element={<NewsEdit />}></Route>
+        <Route path="/home/create/event" element={<EventForm />} />
 
 
         </Routes>

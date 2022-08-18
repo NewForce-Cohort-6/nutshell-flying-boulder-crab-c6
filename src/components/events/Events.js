@@ -22,14 +22,15 @@ export const Events = () => {
         },
         []
     )
-//figure out changing timestamp to readable date
+
     return (
     <>
         {
             events.map(event => 
                 <div className="event" key={`event--${event.id}`}>
                     <section>Event: {event.name}</section>
-                    <section>Event Date: {event.dateOf}</section>
+                    <section>Event Date: {new Date (event.dateOf)}</section>
+                    <section>Event Location: {event.location}</section>
                 </div>)
         }
     </>
