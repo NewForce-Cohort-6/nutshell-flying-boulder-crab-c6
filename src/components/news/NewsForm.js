@@ -59,6 +59,47 @@ export const NewsForm = () => {
                     }></input>
                 </div>
             </fieldset>
+            <fieldset>
+                <div>
+                <label htmlFor="Article Title">Title: </label>
+                    <input 
+                    required 
+                    autofocus 
+                    type="text"
+                    placeholder="insert title here"
+                    value={article.title}
+                    onChange={
+                        (evt) => {
+                            const copy = {...article}
+                            copy.title = evt.target.value
+                            update(copy)
+                        }
+                    }></input>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div>
+                <label htmlFor="synopsis">Synopsis: </label>
+                    <input 
+                    required 
+                    autofocus 
+                    type="text"
+                    placeholder="insert title here"
+                    value={article.synopsis}
+                    onChange={
+                        (evt) => {
+                            const copy = {...article}
+                            copy.synopsis = evt.target.value
+                            update(copy)
+                        }
+                    }></input>
+                </div>
+            </fieldset>
+            <button 
+            onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
+            className="btn btn-primary">
+                Submit Ticket
+            </button>
         </form>
     )
 }
