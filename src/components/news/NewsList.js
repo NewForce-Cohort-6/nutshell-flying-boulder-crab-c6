@@ -2,6 +2,7 @@
 //This module will fetch all news articles, map them into html, and export them
 
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 import "./News.css"
 
 export const NewsList = () => {
@@ -11,6 +12,7 @@ export const NewsList = () => {
     //get and store active user for later
     const localActiveUser = sessionStorage.getItem("activeUser")
     const activeUserObject = JSON.parse(localActiveUser) 
+    const navigate = useNavigate()
 
     //fetch and store array of news articles
     useEffect(() => {
@@ -30,10 +32,13 @@ export const NewsList = () => {
                         <h3 className="item--title">{item.title}</h3>
                         <p>{item.synopsis}</p>
                         <a href={item.url}>Link to article</a>
+                        
                     </div>
+                    
                     </>
                 })
             }
+        <button onClick={() => navigate('/createnews')}>Create Ticket</button>
         </section>
         </>
     )
