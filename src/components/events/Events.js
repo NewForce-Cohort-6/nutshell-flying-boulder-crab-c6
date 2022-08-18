@@ -1,7 +1,7 @@
 //Natalie Thiele
 //This module will generate display of user's events, including name of event, date of event,  location of event, in chrono order(?), with larger/bolder styling for the "next" event in list. Will also display an Edit button associated with each event in list.
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 export const Events = () => {

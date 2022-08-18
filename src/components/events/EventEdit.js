@@ -1,10 +1,10 @@
 //Natalie Thiele
 //This module creates form to PUT changes to event object into the database
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 
-export const EditEvent = () => {
+export const EventEdit = () => {
     const [event, editEvent] = useState({
         name: ""
     })
@@ -13,7 +13,7 @@ export const EditEvent = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        fetch(`http://localhost:8088/events/${taskId}`)
+        fetch(`http://localhost:8088/events/${eventId}`)
             .then(response => response.json())
             .then((data) => {
                 editEvent(data)

@@ -2,7 +2,7 @@
 //This module will create the event section's header, event display, and "Create New Event" button
 
 import { useNavigate } from "react-router-dom"
-import { Events } from "./events"
+import { Events } from "./Events"
 
 export const EventsDisplay = () => {
 
