@@ -3,13 +3,12 @@
 
 
 import { Outlet, Route, Routes } from "react-router-dom"
-  import { ChatForm } from "../chat/ChatForm"
-//  import { ChatEdit } from "../chat/ChatEdits"
-// import { ChatList } from "../chat/ChatList"
-import {Chat} from '../chat/Chat.js'
+  import { MessageForm } from "../message/MessageForm"
+//  import { MessageEdit } from "../message/MessageEdits"
+// import { MessageList } from "../message/MessageList"
+import {Message} from '../message/Message.js'
 import { News } from "../news/News.js"
-import { NewsList } from "../news/NewsList.js"
-import {Route, Routes} from 'react-router-dom'
+import { NewsList } from "../news/NewsList.js" 
 import { NewsForm } from "../news/NewsForm.js"
 
 import { EditTask } from "../tasks/EditTask"
@@ -29,7 +28,7 @@ export const UserViews = () => {
 
     
 
-        <Route path="/home" element={<><News /><TaskDisplay /><Chats /></>}></Route>
+        <Route path="/home" element={<><News /><TaskDisplay /><Messages /></>}></Route>
         <Route path="/createnews" element={<NewsForm />}></Route>
 
         <Route path="/home/create/task" element={<TaskForm />} />
