@@ -159,29 +159,36 @@
       "id": 1,
       "userId": 4,
       "name": "St. Mary's Gala",
-      "dateOf": "03/23/23",
+      "dateOf": 1659309305450,
       "location": "Westfall Hose Company Event Space"
     },
     {
       "id": 2,
       "userId": 1,
       "name": "Apple Harvest Festival",
-      "dateOf": "10/17/22",
+      "dateOf": 1659311010320,
       "location": "Enzo's Orchard"
     },
     {
       "id": 3,
       "userId": 3,
       "name": "Valentine's Fundraiser",
-      "dateOf": "02/14/23",
+      "dateOf": 1659367514699,
       "location": "Broadmoore Arena"
     },
     {
       "id": 4,
       "userId": 2,
       "name": "Hotdog Festival",
-      "dateOf": "06/08/23",
+      "dateOf": 1959367514699,
       "location": "Pullman Square"
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "name": "Barn Raising",
+      "dateOf": 1659367514699,
+      "location": "Old Pietimer Place"
     }
   ]
 }
