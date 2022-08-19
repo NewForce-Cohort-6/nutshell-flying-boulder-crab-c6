@@ -7,7 +7,7 @@ import { Navigate, useNavigate } from "react-router-dom"
 export const TaskForm = () => {
     //this was copied over from HoneyRae's and I wonder what needs to change or if we need an object like this or not. What was it doing specifically in HoneyRae?
     const [task, update] = useState({
-        task: "",
+        // task: "",
         completed: false
     })
 
@@ -84,7 +84,7 @@ export const TaskForm = () => {
             <button 
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
                 className="btn btn-primary">
-                Submit Event
+                Submit Task
             </button>
         </form>
     </>

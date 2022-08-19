@@ -1,0 +1,14 @@
+/* Natalie Thiele 
+This module maintains styling for events. Remember that "next" event will have larger/bolder styling and nonwhite inobtrusive color*/
+
+.eventDisplay {
+    display: flex;
+    flex-direction: column;
+}
+
+.event {
+    background-color: papayawhip;
+    border: 1px dotted rgb(218, 61, 200);
+    padding: 0.7rem;
+    margin: 0.5rem;
+}
