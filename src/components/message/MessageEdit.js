@@ -8,8 +8,10 @@ export const MessageEdit = () => {
     const [message, update] = useState({
         contents: "",
     });
-    const { messageId } = useParams();
+    
     const navigate = useNavigate();
+    const { messageId } = useParams();
+    
 
     useEffect(() => {
         fetch(`http://localhost:8088/messages/${messageId}`)

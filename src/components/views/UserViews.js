@@ -3,10 +3,7 @@
 
 
 import { Outlet, Route, Routes } from "react-router-dom"
-  import { MessageForm } from "../message/MessageForm"
-//  import { MessageEdit } from "../message/MessageEdits"
-// import { MessageList } from "../message/MessageList"
-import {Message} from '../message/Message.js'
+
 import { News } from "../news/News.js"
 import { NewsList } from "../news/NewsList.js" 
 import { NewsForm } from "../news/NewsForm.js"
@@ -22,13 +19,11 @@ export const UserViews = () => {
     return (
 
     <Routes>
-    <Route path="/" element={<Chat />}></Route>
+     
 
     <Route path="/home" element={<TaskDisplay />} />
-
     
-
-        <Route path="/home" element={<><News /><TaskDisplay /><Messages /></>}></Route>
+        <Route path="/home" element={<><News /><TaskDisplay /></>}></Route>
         <Route path="/createnews" element={<NewsForm />}></Route>
 
         <Route path="/home/create/task" element={<TaskForm />} />
@@ -41,9 +36,9 @@ export const UserViews = () => {
         
  
 {/*                            
-              {/* <Route path="chats/edit/:messageId" element={ <ChatEdit/> } /> */}
-           {/* <Route path="chats" element={ <ChatList/>}  />                */}
-              {/* <Route path="chat/create" element={ <ChatForm /> } />
+              {/* <Route path="messages/edit/:messageId" element={ <MessageEdit/> } /> */}
+           {/* <Route path="messages" element={ <MesssageList/>}  />                */}
+              {/* <Route path="messages/create" element={ <MessageForm /> } />
                      */}
         
 

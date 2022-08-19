@@ -10,7 +10,7 @@ export const Message =({message, changeState}) => {
     const [isEdit, setIsEdit] = useState(false)
     const [updateMessage, setUpdateMessage] =useState(message)
     
-    const loggedInUser = JSON.parse(localStorage.getItem("nutshell_user"))
+    const loggedInUser = JSON.parse(localStorage.getItem("activeUser"))
     
     
     

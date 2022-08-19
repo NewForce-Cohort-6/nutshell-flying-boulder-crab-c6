@@ -14,16 +14,22 @@ export const MessageForm = ({changeState}) => {
         timeStamp: 0,
 
     })
+
+    /*
+         the useNavigation() hook so redirect
+        the user to the message list
+    */
+
     const navigate = useNavigate()
-    const localNutUser = localStorage.getItem("nutshell_user")
-    const NutUserObject = JSON.parse(localNutUser)
+    const localActiveUser = localStorage.getItem("activeUser")
+    const activeUserObject = JSON.parse(localActiveUser)
 
     const handleSaveButtonClick = (event) => {
         event.preventDefault()
 
         // Create the object to be saved to the API
         const messageToSendToAPI = {
-            "userId": NutUserObject.id,
+            "userId": activeUserObject.id,
             "contents": messages.contents,
             "timeStamp": Date.now()
         }
@@ -46,7 +52,7 @@ export const MessageForm = ({changeState}) => {
 
     return (
         <form className="messageForm">
-            {/* <h3 className="messageForm__title">New Message</h3> */}
+           
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="contents"></label>
@@ -54,7 +60,7 @@ export const MessageForm = ({changeState}) => {
                         required autoFocus
                         type="text"
                         className="form-control"
-                        placeholder="Type your message..."
+                        placeholder="Type new message..."
                         value={messages.contents}
                         onChange={
                             (evt) => {
@@ -65,7 +71,7 @@ export const MessageForm = ({changeState}) => {
                         } />
                 </div>
                 <button onClick={(clickEvent) => handleSaveButtonClick(clickEvent)} className="btn btn-primary">
-                    Send
+                Submit Message
                 </button>
             </fieldset>
         </form>
