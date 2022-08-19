@@ -5,23 +5,29 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 export const EventForm = () => {
-    const [event, update] = useState({
-        name: ""
+
+    const localNutshellUser = sessionStorage.getItem("activeUser")
+    const nutShellUserObject = JSON.parse(localNutshellUser)
+
+    const [theEvent, update] = useState({
+        userId: nutShellUserObject.id,
+        name: "",
+        dateOf: "yyyy-mm-dd",
+        location: ""
     })
 
     const navigate = useNavigate()
 
-    const localNutshellUser = sessionStorage.getItem("activeUser")
-    const nutShellUserObject = JSON.parse(localNutshellUser)
+
 
     const handleSaveButtonClick = (event) => {
         event.preventDefault()
             
         const eventToSendToApi = {
                 userId: nutShellUserObject.id,
-                event: event.name,
-                dateOf: new Date(event.dateOf),
-                location: event.location
+                name: theEvent.name,
+                dateOf: theEvent.dateOf,
+                location: theEvent.location
             }
     
         
@@ -41,8 +47,8 @@ export const EventForm = () => {
     }
 
     return (<>
-        <form className="taskForm">
-            <h2 className="taskForm__title">New Event</h2>
+        <form className="eventForm">
+            <h2 className="eventForm__title">New Event</h2>
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="description">Event Name:</label>
@@ -51,10 +57,10 @@ export const EventForm = () => {
                         type="text"
                         className="form-control"
                         placeholder="Brief description of event"
-                        value={event.name}
+                        value={theEvent.name}
                         onChange={
                             (evt) => {
-                                const copy = {...event}
+                                const copy = {...theEvent}
                                 copy.name = evt.target.value
                                 update(copy)
                             }
@@ -69,11 +75,11 @@ export const EventForm = () => {
                         type="text"
                         className="form-control"
                         placeholder="Enter Date"
-                        value={event.date}
+                        value={theEvent.dateOf}
                         onChange={
                             (evt) => {
-                                const copy = {...event}
-                                copy.date = evt.target.value
+                                const copy = {...theEvent}
+                                copy.dateOf = evt.target.value
                                 update(copy)
                             }
                         } />
@@ -87,10 +93,10 @@ export const EventForm = () => {
                         type="text"
                         className="form-control"
                         placeholder="Enter Location"
-                        value={event.location}
+                        value={theEvent.location}
                         onChange={
                             (evt) => {
-                                const copy = {...event}
+                                const copy = {...theEvent}
                                 copy.location = evt.target.value
                                 update(copy)
                             }

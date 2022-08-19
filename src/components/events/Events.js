@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import "./events.css"
 
 export const Events = () => {
     const [events, setEvents] = useState([])
@@ -23,17 +24,22 @@ export const Events = () => {
         []
     )
 
+
     return (
     <>
         {
-            events.map(event => 
-                <div className="event" key={`event--${event.id}`}>
-                    <section>Event: {event.name}</section>
-                    <section>Event Date: {new Date (event.dateOf)}</section>
-                    <section>Event Location: {event.location}</section>
-                </div>)
+            events.map(theEvent => 
+                <div className="event" key={`event--${theEvent.id}`}>
+                    <section>Event: {theEvent.name}</section>
+                    <section>Event Date: {theEvent.dateOf}</section>
+                    <section>Event Location: {theEvent.location}</section>
+                    <button onClick={() => navigate (`/home/edit/${theEvent.id}`)}>Edit Event</button>
+                </div>
+                )
         }
     </>
 
     )
 }
+
+//chrono order, but I'm not sure how to highlight next event. get instructor help if there's time.

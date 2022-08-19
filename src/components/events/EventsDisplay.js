@@ -3,6 +3,7 @@
 
 import { useNavigate } from "react-router-dom"
 import { Events } from "./Events"
+import "./events.css"
 
 export const EventsDisplay = () => {
 

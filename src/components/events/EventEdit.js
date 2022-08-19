@@ -5,8 +5,15 @@ import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 
 export const EventEdit = () => {
-    const [event, editEvent] = useState({
-        name: ""
+
+    const localNutshellUser = sessionStorage.getItem("activeUser")
+    const nutShellUserObject = JSON.parse(localNutshellUser)
+
+    const [theEvent, editEvent] = useState({
+        userId: nutShellUserObject.id,
+        name: "",
+        dateOf: "",
+        location: ""
     })
 
     const { eventId } = useParams()
@@ -18,18 +25,25 @@ export const EventEdit = () => {
             .then((data) => {
                 editEvent(data)
             })
-    }, [ eventId ])
+    }, [eventId])
 
     const handleSaveButtonClick = (event) => {
         event.preventDefault()
 
+        const updatedEventObject = {
+            userId: nutShellUserObject.id,
+            name: theEvent.name,
+            dateOf: theEvent.dateOf,
+            location: theEvent.location
+        }
+
         //Fetch for the PUT request to replace the object being edited
-        fetch(`http://localhost:8088/events/${event.id}`, {
+        fetch(`http://localhost:8088/events/${eventId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(event)
+            body: JSON.stringify(updatedEventObject)
         })
             .then(response => response.json())
             .then(() => {
@@ -51,15 +65,15 @@ export const EventEdit = () => {
                         height: "10rem"
                     }}
                     className="form-control"
-                    value={event.name}
+                    value={theEvent.name}
                     onChange={
                         (evt) => {
                             // Update state with a modified copy
-                            const copy = { ...event }
+                            const copy = { ...theEvent }
                             copy.name = evt.target.value
                             editEvent(copy)
                         }
-                    }>{event.name}</textarea>
+                    }>{theEvent.name}</textarea>
             </div>
         </fieldset>
         <fieldset>
@@ -72,15 +86,15 @@ export const EventEdit = () => {
                         height: "10rem"
                     }}
                     className="form-control"
-                    value={event.date}
+                    value={theEvent.dateOf}
                     onChange={
                         (evt) => {
                             // Update state with a modified copy
-                            const copy = { ...event }
-                            copy.date = evt.target.value
+                            const copy = { ...theEvent }
+                            copy.dateOf = evt.target.value
                             editEvent(copy)
                         }
-                    }>{event.date}</textarea>
+                    }>{theEvent.date}</textarea>
             </div>
         </fieldset>
         <fieldset>
@@ -93,15 +107,15 @@ export const EventEdit = () => {
                         height: "10rem"
                     }}
                     className="form-control"
-                    value={event.location}
+                    value={theEvent.location}
                     onChange={
                         (evt) => {
                             // Update state with a modified copy
-                            const copy = { ...event }
+                            const copy = { ...theEvent }
                             copy.location = evt.target.value
                             editEvent(copy)
                         }
-                    }>{event.location}</textarea>
+                    }>{theEvent.location}</textarea>
             </div>
         </fieldset>
         <button

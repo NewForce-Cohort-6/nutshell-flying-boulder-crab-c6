@@ -111,7 +111,8 @@
       "id": 5,
       "userId": 1,
       "task": "Air out hard-drive cache",
-      "completed": "true"
+      "completed": "true",
+      "completedBy": "12/12/33"
     },
     {
       "userId": 4,
@@ -140,6 +141,26 @@
       "completed": false,
       "completedBy": "12/12/99",
       "id": 9
+    },
+    {
+      "userId": 2,
+      "task": "Get weird",
+      "completed": false,
+      "completedBy": "2045-05-05",
+      "id": 10
+    },
+    {
+      "userId": 2,
+      "task": "meep",
+      "completedBy": "2022-12-12",
+      "id": 11
+    },
+    {
+      "userId": 2,
+      "task": "beep",
+      "completed": false,
+      "completedBy": "2025-05-05",
+      "id": 12
     }
   ],
   "events": [
@@ -147,36 +168,53 @@
       "id": 1,
       "userId": 4,
       "name": "St. Mary's Gala",
-      "dateOf": 1659309305450,
+      "dateOf": "2022-02-02",
       "location": "Westfall Hose Company Event Space"
     },
     {
       "id": 2,
       "userId": 1,
       "name": "Apple Harvest Festival",
-      "dateOf": 1659311010320,
+      "dateOf": "2022-02-03",
       "location": "Enzo's Orchard"
     },
     {
       "id": 3,
       "userId": 3,
       "name": "Valentine's Fundraiser",
-      "dateOf": 1659367514699,
+      "dateOf": "2022-02-04",
       "location": "Broadmoore Arena"
     },
     {
       "id": 4,
       "userId": 2,
       "name": "Hotdog Festival",
-      "dateOf": 1959367514699,
+      "dateOf": "2022-02-05",
       "location": "Pullman Square"
     },
     {
       "id": 5,
       "userId": 2,
       "name": "Barn Raising",
-      "dateOf": 1659367514699,
+      "dateOf": "2022-02-06",
       "location": "Old Pietimer Place"
+    },
+    {
+      "id": 6
+    },
+    {
+      "userId": 2,
+      "name": "Two thousand zero zero",
+      "dateOf": "2000-01-01",
+      "location": "party over whoops out of time",
+      "id": 7
+    },
+    {
+      "userId": 2,
+      "name": "this event",
+      "dateOf": "2222-02-02",
+      "location": "that place",
+      "id": 8
     }
   ]
 }
