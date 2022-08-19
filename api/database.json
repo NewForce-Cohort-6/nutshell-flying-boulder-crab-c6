@@ -87,59 +87,98 @@
       "id": 1,
       "userId": 1,
       "task": "Take out garbage",
-      "completed": "true"
+      "completed": "true",
+      "completedBy": "2021-07-12"
     },
     {
       "id": 2,
       "userId": 2,
       "task": "File existing client folders",
-      "completed": "false"
+      "completed": "false",
+      "completedBy": "2024-07-12"
     },
     {
       "id": 3,
       "userId": 3,
       "task": "Clean bathroom",
-      "completed": "false"
+      "completed": "false",
+      "completedBy": "2024-02-02"
     },
     {
       "id": 4,
       "userId": 2,
       "task": "Reticulate splines",
-      "completed": "false"
+      "completed": "false",
+      "completedBy": "2025-05-05"
     },
     {
       "id": 5,
       "userId": 1,
       "task": "Air out hard-drive cache",
-      "completed": "true"
+      "completed": "true",
+      "completedBy": "2033-03-06"
     },
     {
       "userId": 4,
       "task": "Don't tell anyone I'm Batman",
       "completed": true,
-      "completedBy": "07/12/24",
+      "completedBy": "1999-01-06",
       "id": 6
     },
     {
       "userId": 4,
       "task": "testing",
       "completed": true,
-      "completedBy": "testing",
+      "completedBy": "2001-04-09",
       "id": 7
     },
     {
       "userId": 4,
       "task": "hfsdjkahflkjsdf",
       "completed": true,
-      "completedBy": "12/12/25",
+      "completedBy": "2026-12-12",
       "id": 8
     },
     {
       "userId": 4,
       "task": "Dont tell anyone I'm batman",
       "completed": false,
-      "completedBy": "12/12/99",
+      "completedBy": "1985-05-06",
       "id": 9
+    },
+    {
+      "userId": 2,
+      "task": "Get weird",
+      "completed": false,
+      "completedBy": "2045-05-05",
+      "id": 10
+    },
+    {
+      "userId": 2,
+      "task": "meep",
+      "completedBy": "2022-12-12",
+      "id": 11
+    },
+    {
+      "userId": 2,
+      "task": "beep",
+      "completed": false,
+      "completedBy": "2025-05-05",
+      "id": 12
+    },
+    {
+      "userId": 4,
+      "task": "Cave cleaning",
+      "completed": false,
+      "completedBy": "1977-02-03",
+      "id": 13
+    },
+    {
+      "userId": 4,
+      "task": "Gotham Pride",
+      "completed": false,
+      "completedBy": "2022-06-08",
+      "id": 14
     }
   ],
   "events": [
@@ -147,29 +186,67 @@
       "id": 1,
       "userId": 4,
       "name": "St. Mary's Gala",
-      "dateOf": "03/23/23",
+      "dateOf": "2022-02-02",
       "location": "Westfall Hose Company Event Space"
     },
     {
       "id": 2,
       "userId": 1,
       "name": "Apple Harvest Festival",
-      "dateOf": "10/17/22",
+      "dateOf": "2022-02-03",
       "location": "Enzo's Orchard"
     },
     {
       "id": 3,
       "userId": 3,
       "name": "Valentine's Fundraiser",
-      "dateOf": "02/14/23",
+      "dateOf": "2022-02-04",
       "location": "Broadmoore Arena"
     },
     {
       "id": 4,
       "userId": 2,
       "name": "Hotdog Festival",
-      "dateOf": "06/08/23",
+      "dateOf": "2022-02-05",
       "location": "Pullman Square"
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "name": "Barn Raising",
+      "dateOf": "2022-02-06",
+      "location": "Old Pietimer Place"
+    },
+    {
+      "id": 6
+    },
+    {
+      "userId": 2,
+      "name": "Two thousand 0 0",
+      "dateOf": "2000-01-01",
+      "location": "party over whoops out of time!",
+      "id": 7
+    },
+    {
+      "userId": 2,
+      "name": "this event",
+      "dateOf": "2222-02-02",
+      "location": "that place",
+      "id": 8
+    },
+    {
+      "userId": 4,
+      "name": "Fancy masquerade ball",
+      "dateOf": "2022-10-12",
+      "location": "Wayne Manor",
+      "id": 9
+    },
+    {
+      "userId": 2,
+      "name": "what",
+      "dateOf": "2022-05-05",
+      "location": "is that",
+      "id": 10
     }
   ]
 }

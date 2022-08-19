@@ -16,7 +16,7 @@ export const Tasks = () => {
 
     //get all tasks by associated user for initial view
     useEffect(() => {
-        return fetch(`http://localhost:8088/tasks?_expand=user&userId=${nutShellUserObject.id}`)
+        return fetch(`http://localhost:8088/tasks?_expand=user&_sort=completedBy&userId=${nutShellUserObject.id}`)
             .then(res => res.json())
             .then((taskArray) => {
                 setTasks(taskArray)
