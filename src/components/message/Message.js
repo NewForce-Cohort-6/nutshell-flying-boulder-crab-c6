@@ -1,5 +1,5 @@
 //  Julie Adams 
-// This module
+
 
 import { useState } from "react"
 // import { Link, useNavigate } from "react-router-dom"
@@ -38,11 +38,11 @@ export const Message =({message, changeState}) => {
                         setIsEdit(false)
                     })
             })
-                }}><input value={updateMessage.contents}
+                }}><input value={updateMessage.message}
                  onChange={
                     (evt) => {
                         const copy = { ...updateMessage }
-                        copy.contents = evt.target.value
+                        copy.message = evt.target.value
                         setUpdateMessage(copy)
                     }
                 } />
@@ -53,7 +53,10 @@ export const Message =({message, changeState}) => {
     
                 :
             <section className="message" key={`message--${message.id}`}>
-                                <div onDoubleClick={()=> setIsEdit(true)}>{message?.user?.username}: {message.contents}</div>
+                                <div onDoubleClick={()=> setIsEdit(true)}>
+                                    {message?.user?.userName}: 
+                                    {message.message}
+                                    </div>
                                 {/* <Link to={`/messages/${message.id}/edit`}>Edit</Link> */}
     
                             </section>

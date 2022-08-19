@@ -1,5 +1,5 @@
 /* Julie Adams 
-This module provides the css specific to the chat section  */
+This module provides the css specific to the message section  */
 
 
 .messages {
@@ -22,7 +22,7 @@ This module provides the css specific to the chat section  */
 }
 .message {
     background-color: rgb(243, 230, 255);
-    border: 1px dotted darkmagenta;
+    border: 1px dotted rgb(241, 112, 83);
     padding: 0.7rem;
     margin: 0.5rem 0;
 }
@@ -33,7 +33,7 @@ This module provides the css specific to the chat section  */
 .nut__Button {
     width: 50%;
     align-self: center;
-    color: #007ba7;
+    color: #16b4ee;
     background-color: aliceblue;
 }
 .messages__header {

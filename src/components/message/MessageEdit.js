@@ -1,16 +1,16 @@
 //  Julie Adams 
-// This module 
+// This module allows for editing messages
 
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 
 export const MessageEdit = () => {
     const [message, update] = useState({
-        contents: "",
+        message: "",
     });
     
-    const navigate = useNavigate();
-    const { messageId } = useParams();
+    const navigate = useNavigate()
+    const { messageId } = useParams()
     
 
     useEffect(() => {
@@ -22,7 +22,7 @@ export const MessageEdit = () => {
     }, [messageId]);
 
     const handleSaveButtonClick = (event) => {
-        event.preventDefault();
+        event.preventDefault()
 
         return fetch(`http://localhost:8088/messages/${message.id}`, {
             method: "PUT",
@@ -33,7 +33,7 @@ export const MessageEdit = () => {
         })
             .then(response => response.json())
             .then(() => {
-                navigate("/");
+                navigate("/")
             });
     };
 
@@ -47,14 +47,14 @@ export const MessageEdit = () => {
                     required autoFocus
                     type="text"
                     className="form-control"
-                    value={message.contents}
+                    value={message.message}
                     onChange={
                         (evt) => {
                             const copy = { ...message }
-                            copy.contents = evt.target.value
+                            copy.message = evt.target.value
                             update(copy)
                         }
-                    }>{message.contents}</textarea>
+                    }>{message.message}</textarea>
             </div>
         </fieldset>
         <button

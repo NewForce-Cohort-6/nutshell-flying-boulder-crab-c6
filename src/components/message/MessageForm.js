@@ -1,17 +1,16 @@
-//  Julie Adams 
-// This module gets the state from the api and update the state when chat is edited
-
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 export const MessageForm = ({changeState}) => {
-    /*
+   
+     /*
         TODO: Add the correct default properties to the
         initial state object
     */
-    const [messages, updateMessages] = useState({
-        contents: "",
-        timeStamp: 0,
+    const [message, updateMessages] = useState({
+        userId: "",
+        message: ""
+       
 
     })
 
@@ -21,7 +20,7 @@ export const MessageForm = ({changeState}) => {
     */
 
     const navigate = useNavigate()
-    const localActiveUser = localStorage.getItem("activeUser")
+    const localActiveUser = sessionStorage.getItem("activeUser")
     const activeUserObject = JSON.parse(localActiveUser)
 
     const handleSaveButtonClick = (event) => {
@@ -29,13 +28,13 @@ export const MessageForm = ({changeState}) => {
 
         // Create the object to be saved to the API
         const messageToSendToAPI = {
-            "userId": activeUserObject.id,
-            "contents": messages.contents,
-            "timeStamp": Date.now()
+            userId: activeUserObject.id,
+            message: message.message
+            
         }
 
         // TODO: Perform the fetch() to POST the object to the API
-        return fetch(`http://localhost:8088/messages`, {
+      fetch(`http://localhost:8088/messages`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -61,11 +60,11 @@ export const MessageForm = ({changeState}) => {
                         type="text"
                         className="form-control"
                         placeholder="Type new message..."
-                        value={messages.contents}
+                        value={message.message}
                         onChange={
                             (evt) => {
-                                const copy = { ...messages }
-                                copy.contents = evt.target.value
+                                const copy = { ...message }
+                                copy.message = evt.target.value
                                 updateMessages(copy)
                             }
                         } />

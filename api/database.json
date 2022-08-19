@@ -36,6 +36,11 @@
       "id": 3,
       "userId": 2,
       "message": "Help Me!?"
+    },
+    {
+      "userId": 1,
+      "message": "Hope it works.",
+      "id": 4
     }
   ],
   "news": [

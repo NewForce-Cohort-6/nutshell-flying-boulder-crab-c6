@@ -4,9 +4,9 @@
 
 import { useEffect, useState } from "react"
 import { useNavigate, Link } from "react-router-dom"
-import { Message } from "./message"
-import { MessageForm } from "./messageForm"
-import "./messages.css"
+import { Message } from "./Message"
+import { MessageForm }  from "./MessageForm"
+import "./Message.css"
 
 
 export const MessageList = () => {
